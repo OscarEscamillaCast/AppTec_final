@@ -1,0 +1,228 @@
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/fondo.png');
+    background-repeat:repeat-x;
+    background-position: center bottom; /* Posiciona la imagen en la parte inferior */
+    background-attachment: fixed; /* Fija la imagen en la posición especificada */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    opacity: 0.3; /* Ajusta este valor según sea necesario */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.top-half, .bottom-half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.bottom-half {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 48%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #f0f0f0;
+}
+
+.dark .card {
+    background-color: #2d2d2d;
+}
+
+.dark .card:hover {
+    background-color: #3d3d3d;
+}
+
+.icon {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1rem;
+    stroke: currentColor; /* This ensures the icon uses the color from the following classes */
+}
+
+.icon-blue {
+    color: #3b82f6; /* Blue color */
+}
+
+.icon-green {
+    color: #10b981; /* Green color */
+}
+
+.icon-yellow {
+    color: #f59e0b; /* Yellow color */
+}
+
+.card-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #333333;
+}
+
+.dark .card-title {
+    color: #d1d1d1;
+}
+
+.profile-icon {
+    position: relative;
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+}
+
+.profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card-subtitle {
+    color: #666666;
+}
+
+.dark .card-subtitle {
+    color: #a1a1a1;
+}
+
+/*estilos para tajeta modal*/
+/* Estilos del modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Posición fija para que esté por encima del contenido */
+    z-index: 1; /* Ubicar el modal encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Permitir desplazamiento si el contenido es demasiado grande */
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+  }
+  
+  /* Contenido del modal */
+  .card-digital {
+    position: relative;
+    max-width: 100%; /* Máximo ancho permitido */
+    border: 1px solid #a06e22;
+    background-color: #fccb81;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    display: flex; /* Utilizando Flexbox */
+    flex-direction: column; /* Columnas apiladas */
+}
+
+.card-digital .content-top {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambiado */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-digital .content-bottom {
+    padding: 20px;
+}
+
+.card-digital .student-info {
+    display: flex;
+    align-items: center;
+    background-image: url('../img/fondo-crede.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Reducido */
+    border-radius: 8px; /* Agregado */
+}
+
+.card-digital .student-photo {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-digital .student-details {
+    color: #000000; /* Cambiado */
+}
+
+.card-digital .expiration-date {
+    color: #696969; /* Cambiado */
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+    position: relative; /* Agregado */
+}
+
+.close {
+    color: #ff0000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(212, 207, 207);
+    text-decoration: none;
+    cursor: pointer;
+}
