@@ -1,32 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="css/index.css">
-    <script src="cordova.js"></script>
-    <script src="js/login.js"></script>
-    <title>AppTec - Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #010E34;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #010E34;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .input {
+            width: 100%;
+            height: 40px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            background-color: #FE9040;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #FFA862;
+        }
+
+        .errorMessage {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900">
+<body>
     <div class="container">
-        <div class="header">
-            <img src="img/logo.png" class="logo" alt="Logo">
+        <div class="logoContainer">
+            <img src="img\logo.png" alt="Logo" style="width: 300px; height: 300px;">
         </div>
-        <div class="login-form">
-            <form id="loginForm">
-                <label for="controlNumber"># de Control:</label>
-                <input type="text" id="controlNumber" name="controlNumber" required>
-                <br>
-                <label for="nip">NIP:</label>
-                <input type="password" id="nip" name="nip" required>
-                <br>
-                <button type="submit">Iniciar Sesión</button>
-            </form>
+        <div class="inputContainer">
+            <input type="text" class="input" placeholder="No. Control" id="numDeControl">
+            <input type="password" class="input" placeholder="NIP" id="nip">
         </div>
+        <div id="errorMessage" class="errorMessage"></div>
+        <button class="button" onclick="login()">ENTRAR</button>
     </div>
+
+    <script src="login.js"></script>
 </body>
 </html>

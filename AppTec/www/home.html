@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="..\www\js\modal.js"></script>
+        <title>AppTec</title>
+    </head>
+    <body class="bg-gray-100 dark:bg-gray-900">
+        <!-- Contenedor principal que centra el contenido vertical y horizontalmente -->
+        <div class="container">
+            <!-- Parte superior -->
+            <div class="header">
+                <img src="img\logo.png" class="logo" alt="Logo">
+            </div>
+            <div class="top-half">
+                <div class="card col-span-2">
+                    <span class="profile-icon">
+                        <img class="profile-img" alt="User Avatar" src="img\perfil.png" />
+                    </span>
+                    <div class="text-center">
+                        <h3 class="card-title">Miguel Angel Ibarra Basaldua</h3>
+                        <p class="card-subtitle">20140189</p>
+                        <p class="card-subtitle">Estudiante</p>
+                        
+                        <!--modal de la tarjeta-->
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                            <span class="close" onclick="cerrarModal()">&times;</span>
+                            <!--tarjeta digital-->
+                            <div class="card-digital">
+                                <div class="bg-img"></div>
+                                <div class="content-top">
+                                  <img src="img\logo-apptec.png" width="30" height="30" alt="Escudo de la universidad" class="university-logo">
+                                </div>
+                                <div class="content-bottom">
+                                  <div class="student-info">
+                                    <img src="img\perfil.png" width="96" height="96" alt="Foto del estudiante" class="student-photo">
+                                    <div class="student-details">
+                                      <h3>Miguel Angel Ibarra Basaldua </h3>
+                                      <p>Número de control: 20140189</p>
+                                      <p>Carrera: Ingeniería en Sistemas Computacionales</p>
+                                      <p class="expiration-date">Válido hasta: 31/12/2024</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!---->
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            
+            <!-- Parte inferior dividida en dos -->
+            <div class="bottom-half">
+                <!-- Primera columna -->
+                <div class="bottom-column">
+                    <!-- Tarjeta individual con icono y texto -->
+                    <a class="card" href="#">
+                        <!-- Icono SVG con clase específica -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-blue" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                        </svg>
+                        <!-- Título de la tarjeta -->
+                        <h3 class="card-title">Cursos</h3>
+                    </a>
+                    <!-- Tarjeta individual con icono y texto  -->
+                    <a href="#" class="card" href="#" onclick="mostrarModal()">
+                        <!-- SVG icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-blue">
+                            <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                            <line x1="2" x2="22" y1="10" y2="10"></line>
+                        </svg>
+                        <h3 class="card-title">Credencial</h3>
+                    </a>
+                </div>
+                <!-- Segunda columna -->
+                <div class="bottom-column">
+                    <a class="card" href="#">
+                        <!-- Icono SVG con clase específica -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-yellow" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <!-- Título de la tarjeta -->
+                        <h3 class="card-title">Calificaciones</h3>
+                    </a>
+                    
+                    <a class="card" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-green" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <path d="m9 14 2 2 4-4"></path>
+                        
+                        </svg>
+                        <h3 class="card-title">Evaluaciones</h3>
+                    </a> 
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
