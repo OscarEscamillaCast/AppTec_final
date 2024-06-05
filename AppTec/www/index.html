@@ -2,26 +2,21 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
         <script src="..\www\js\modal.js"></script>
-        <title>Hello World</title>
+        <title>AppTec</title>
     </head>
     <body class="bg-gray-100 dark:bg-gray-900">
         <!-- Contenedor principal que centra el contenido vertical y horizontalmente -->
         <div class="container">
             <!-- Parte superior -->
+            <div class="header">
+                <img src="img\logo.png" class="logo" alt="Logo">
+            </div>
             <div class="top-half">
                 <div class="card col-span-2">
                     <span class="profile-icon">
@@ -31,13 +26,7 @@
                         <h3 class="card-title">Miguel Angel Ibarra Basaldua</h3>
                         <p class="card-subtitle">20140189</p>
                         <p class="card-subtitle">Estudiante</p>
-                        <a class="card-studen" href="#" onclick="mostrarModal()">
-                            <!-- SVG icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-blue">
-                                <rect width="20" height="14" x="2" y="5" rx="2"></rect>
-                                <line x1="2" x2="22" y1="10" y2="10"></line>
-                            </svg>
-                        </a>
+                        
                         <!--modal de la tarjeta-->
                         <div id="myModal" class="modal">
                             <div class="modal-content">
@@ -80,15 +69,14 @@
                         <!-- Título de la tarjeta -->
                         <h3 class="card-title">Cursos</h3>
                     </a>
-                    <!-- Tarjeta individual con icono y texto -->
-                    <a href="#" class="card">
-                        <!-- Icono SVG con clase específica -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-green" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 20h9"></path>
-                            <path d="M16.5 3.5l4 4L7 21H3v-4L16.5 3.5z"></path>
+                    <!-- Tarjeta individual con icono y texto  -->
+                    <a href="#" class="card" href="#" onclick="mostrarModal()">
+                        <!-- SVG icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-blue">
+                            <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                            <line x1="2" x2="22" y1="10" y2="10"></line>
                         </svg>
-                        <!-- Título de la tarjeta -->
-                        <h3 class="card-title">Tareas</h3>
+                        <h3 class="card-title">Credencial</h3>
                     </a>
                 </div>
                 <!-- Segunda columna -->
@@ -101,15 +89,15 @@
                         <!-- Título de la tarjeta -->
                         <h3 class="card-title">Calificaciones</h3>
                     </a>
+                    
                     <a class="card" href="#">
-                        <!-- Icono SVG con clase específica -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-green" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
                             <path d="m9 14 2 2 4-4"></path>
+                        
                         </svg>
-                        <!-- Título de la tarjeta -->
                         <h3 class="card-title">Evaluaciones</h3>
-                    </a>
+                    </a> 
                     
                 </div>
             </div>
