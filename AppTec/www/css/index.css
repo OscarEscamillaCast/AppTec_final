@@ -153,6 +153,12 @@ body::after {
     height: 100%; /* Altura completa */
     overflow: auto; /* Permitir desplazamiento si el contenido es demasiado grande */
     background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    pointer-events: none; /* Ignorar eventos de clic por defecto */
+}
+
+.modal.show {
+    display: block; /* Mostrar el modal */
+    pointer-events: auto; /* Permitir eventos de clic */
 }
 
 .modal-content {
@@ -163,6 +169,7 @@ body::after {
     width: 80%;
     border-radius: 8px;
     position: relative;
+    pointer-events: auto; /* Permitir eventos de clic en el contenido del modal */
 }
 
 .close {
@@ -170,13 +177,13 @@ body::after {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer; /* Cambiar el cursor a pointer */
 }
 
 .close:hover,
 .close:focus {
     color: rgb(212, 207, 207);
     text-decoration: none;
-    cursor: pointer;
 }
 
 /* Estilos de la tarjeta digital dentro del modal */
