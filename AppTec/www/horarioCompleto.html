@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add your custom CSS here */
+        /* Example:
+        .custom-class {
+            property: value;
+        }
+        */
+    </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-950">
+    <header class="flex items-center justify-between h-16 px-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
+        <div class="flex items-center gap-4">
+            <a class="flex items-center gap-2 text-lg font-semibold" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                <span class="sr-only">Student Portal</span>
+            </a>
+            <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                    <line x1="2" x2="22" y1="10" y2="10"></line>
+                </svg>
+                <span class="sr-only">Digital ID</span>
+            </button>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                    <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                </svg>
+                <span class="sr-only">Notifications</span>
+            </button>
+            <span class="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8 border">
+                <span class="flex h-full w-full items-center justify-center rounded-full bg-muted">JD</span>
+            </span>
+        </div>
+    </header>
+    <main class="flex-1 p-4 md:p-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid gap-8">
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Your Schedule</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="relative w-full overflow-auto">
+                            <table class="w-full caption-bottom text-sm">
+                                <thead class="[&amp;_tr]:border-b">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Time</th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Monday</th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Tuesday</th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Wednesday</th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Thursday</th>
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="[&amp;_tr:last-child]:border-0">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">8:00 AM - 9:30 AM</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Math</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">English</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">History</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Science</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Art</td>
+                                    </tr>
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">10:00 AM - 11:30 AM</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Science</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Math</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">English</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">History</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">P.E.</td>
+                                    </tr>
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">12:00 PM - 1:30 PM</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
+                                    </tr>
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">2:00 PM - 3:30 PM</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">History</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Science</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Math</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">English</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Music</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,31 +1,21 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log("DOM completamente cargado y analizado");
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el modal
+    var modal = document.getElementById("horarioModal");
 
-    // Obtener elementos del DOM
-    const modal = document.getElementById("horarioModal");
-    const openModalBtn = document.getElementById("openHorarioModal");
-    const closeModalBtn = document.getElementsByClassName("close")[0];
+    // Obtener el elemento de cierre
+    var closeBtn = modal.querySelector(".close");
 
-    console.log("Elementos obtenidos:", modal, openModalBtn, closeModalBtn);
+    // Agregar un evento clic al elemento de cierre
+    closeBtn.addEventListener("click", function() {
+        modal.style.display = "none"; // Ocultar el modal al hacer clic en el botón de cierre
+    });
 
-    // Abrir el modal al hacer clic en la tarjeta
-    openModalBtn.onclick = function(event) {
-        event.preventDefault(); // Prevenir la acción por defecto del enlace
-        console.log("Botón de abrir modal clicado");
-        modal.style.display = "block";
-    }
+    // Obtener el enlace para abrir el modal
+    var openBtn = document.getElementById("openHorarioModal");
 
-    // Cerrar el modal al hacer clic en el botón de cierre
-    closeModalBtn.onclick = function() {
-        console.log("Botón de cerrar modal clicado");
-        modal.style.display = "none";
-    }
-
-    // Cerrar el modal al hacer clic fuera de la ventana del modal
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            console.log("Clic fuera del modal");
-            modal.style.display = "none";
-        }
-    }
+    // Agregar un evento clic al enlace para abrir el modal
+    openBtn.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+        modal.style.display = "block"; // Mostrar el modal al hacer clic en el enlace
+    });
 });
