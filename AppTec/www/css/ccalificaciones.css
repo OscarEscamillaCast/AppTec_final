@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.bg-white {
+    background-color: rgb(165, 78, 78);
+}
+
+.dark .bg-gray-950 {
+    background-color: #1a202c;
+}
+
+.custom-table-bg {
+    background-color: #001144;
+}
+
+.dark\:bg-gray-950 {
+    background-color: #010E34;
+}
+
+.dark\:text-white {
+    color: #ffffff;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-medium {
+    font-weight: bold;
+}
+
+.max-w-4xl {
+    max-width: 64rem;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 768px) {
+    .text-2xl {
+        font-size: 1.25rem;
+    }
+
+    .gap-4 {
+        gap: 0.5rem;
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .text-2xl {
+        font-size: 1rem;
+    }
+
+    .gap-4 {
+        gap: 0.25rem;
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+}

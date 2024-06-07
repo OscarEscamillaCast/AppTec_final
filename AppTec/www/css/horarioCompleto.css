@@ -2,7 +2,8 @@
 .custom-table-bg {
     background-color: #001144; /* Cambia este valor al color de fondo deseado para la tabla */
 }
-/*fondo generañ*/
+
+/* Fondo general */
 .dark\:bg-gray-950 {
     background-color: #010E34;
 }
@@ -31,80 +32,13 @@
     border-radius: 0.5rem;
 }
 
-/* Grid */
-.grid {
-    display: grid;
+/* Intercalado de filas */
+.even-bg {
+    background-color: #f7fafc; /* Gris claro para las filas pares */
+    color: #000000; /* Texto negro para filas pares */
 }
 
-/* Espaciado entre elementos del grid */
-.gap-4 {
-    gap: 1rem;
-}
-
-/* Flex */
-.flex {
-    display: flex;
-}
-
-/* Alineación de elementos */
-.items-center {
-    align-items: center;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-/* Fuente en negrita */
-.font-bold {
-    font-weight: bold;
-}
-
-.font-medium {
-    font-weight: bold;
-}
-
-/* Ancho máximo */
-.max-w-4xl {
-    max-width: 64rem; /* 1024px */
-}
-
-/* Columnas del grid */
-.grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-/* Media queries para responsividad */
-@media (max-width: 768px) {
-    /* Ajuste de tamaño de fuente */
-    .text-2xl {
-        font-size: 1.25rem; /* Reducir el tamaño de la fuente para pantallas más pequeñas */
-    }
-
-    /* Ajuste de espaciado entre elementos del grid */
-    .gap-4 {
-        gap: 0.5rem; /* Reducir el espaciado entre elementos del grid para pantallas más pequeñas */
-    }
-
-    /* Ajuste de columnas del grid */
-    .grid-cols-3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Cambiar a dos columnas en pantallas más pequeñas */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajuste de tamaño de fuente */
-    .text-2xl {
-        font-size: 1rem; /* Reducir aún más el tamaño de la fuente para pantallas más pequeñas */
-    }
-
-    /* Ajuste de espaciado entre elementos del grid */
-    .gap-4 {
-        gap: 0.25rem; /* Reducir aún más el espaciado entre elementos del grid para pantallas más pequeñas */
-    }
-
-    /* Ajuste de columnas del grid */
-    .grid-cols-3 {
-        grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas más pequeñas */
-    }
+.odd-bg {
+    background-color: #FFFFFF; /* Blanco para las filas impares */
+    color: #000000; /* Texto negro para filas impares */
 }
