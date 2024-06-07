@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Add your custom CSS here */
-        /* Example:
-        .custom-class {
-            property: value;
+        body {
+            background-color: #010E34;
         }
-        */
+        .table-bg {
+            background-color: #1A2A56; /* Azul más claro */
+        }
+        .text-white {
+            color: #FFFFFF;
+        }
+        .even-bg {
+            background-color: #f7fafc; /* Gris claro para las filas pares */
+            color: #000000; /* Texto negro para filas pares */
+        }
+        .odd-bg {
+            background-color: #FFFFFF; /* Blanco para las filas impares */
+            color: #000000; /* Texto negro para filas impares */
+        }
     </style>
     <link rel="stylesheet" href="css/horarioCompleto.css">
 </head>
-
 <body class="bg-gray-100 dark:bg-gray-950">
-    <header class="flex items-center justify-between h-16 px-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
-        <div class="flex items-center gap-4 dark:text-white"> <!-- Agrega la clase dark:text-white aquí -->
+    <header class="flex items-center justify-between h-16 px-4 bg-white dark:bg-gray-950 shadow-sm">
+        <div class="flex items-center gap-4 dark:text-white">
             <a class="flex items-center gap-2 text-lg font-semibold" href="home.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
                     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -28,63 +37,61 @@
             </a>
         </div>
     </header>
-    
-    <main class="flex-1 p-4 md:p-8 custom-bg-color"> <!-- Aplica la clase custom-bg-color aquí -->
+    <main class="flex-1 p-4 md:p-8 custom-bg-color">
         <div class="max-w-4xl mx-auto">
             <div class="grid gap-8">
                 <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
                     <div class="flex flex-col space-y-1.5 p-6">
-                        <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight dark:text-white custom-text-color">Horario</h3> <!-- Aplica la clase custom-text-color aquí -->
+                        <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight dark:text-white custom-text-color">Horario</h3>
                     </div>
                     <div class="p-6">
                         <div class="relative w-full overflow-auto">
-                            <table class="w-full caption-bottom text-sm dark:text-white custom-table-bg"> 
+                            <table class="w-full caption-bottom text-sm dark:text-white custom-table-bg">
                                 <thead class="[&amp;_tr]:border-b">
                                     <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                                         <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Hora</th>
                                         <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Lunes</th>
                                         <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Martes</th>
-                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Miércoles</th> <!-- "Miércoles" con tilde -->
+                                        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Miércoles</th>
                                         <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Jueves</th>
                                         <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">Viernes</th>
                                     </tr>
                                 </thead>
                                 <tbody class="[&amp;_tr:last-child]:border-0">
-                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted odd-bg">
                                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">8:00 AM - 9:30 AM</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Math</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">English</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">History</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Science</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Art</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Calculo Diferencial</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Inglés</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Matemáticas Discretas</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Fundamentos de Programación</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Taller de Ética</td>
                                     </tr>
-                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted even-bg">
                                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">10:00 AM - 11:30 AM</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Science</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Math</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">English</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">History</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">P.E.</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Fundamentos de Programación</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Calculo Diferencial</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Inglés</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Matemáticas Discretas</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Crédito Deportivo</td>
                                     </tr>
-                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted odd-bg">
                                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">12:00 PM - 1:30 PM</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Lunch</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Receso</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Receso</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Receso</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Receso</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Receso</td>
                                     </tr>
-                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted even-bg">
                                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">2:00 PM - 3:30 PM</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">History</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Science</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Math</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">English</td>
-                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Music</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Matemáticas Discretas</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Fundamentos de Programación</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Calculo Diferencial</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Inglés</td>
+                                        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Crédito Cultural</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            
                         </div>
                     </div>
                 </div>
@@ -92,5 +99,4 @@
         </div>
     </main>
 </body>
-
 </html>

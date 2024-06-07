@@ -14,8 +14,8 @@
 }
 
 .modal-content {
-    background-color: #cbeaf8;
-    margin: 5% auto;
+    background-color: #f8fafc;
+    margin: 10px; /* Margen de 40px en todos los lados */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
