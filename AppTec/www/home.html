@@ -29,9 +29,9 @@
                         <img class="profile-img" alt="User Avatar" src="img\perfil.png" />
                     </span>
                     <div class="text-center">
-                        <h3 class="card-title">Miguel Angel Ibarra Basaldua</h3>
-                        <p class="card-subtitle">20140189</p>
-                        <p class="card-subtitle">Estudiante</p>
+                        <h3 class="card-title" id="nombreCompleto2"></h3>
+                        <p class="card-subtitle" id="numeroControl2"></p>
+                        <p class="card-subtitle" id="carrera2"></p>
                         
                         <!--modal de la tarjeta-->
                         <div id="myModal" class="modal">
@@ -49,7 +49,7 @@
                                                 <h3 id="nombreCompleto"> </h3>
                                                 <p id="numeroControl"></p>
                                                 <p id="carrera"></p>
-                                                <p class="expiration-date">Válido hasta: 31/12/2024</p>
+                                                <p class="expiration-date"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -153,6 +153,10 @@
             var usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado'));
 
             if (usuarioLogueado) {
+                document.getElementById('nombreCompleto2').textContent = usuarioLogueado.nombreCompleto;
+                document.getElementById('numeroControl2').textContent = `Número de control: ${usuarioLogueado.numeroControl}`;
+                document.getElementById('carrera2').textContent = `Carrera: ${usuarioLogueado.carrera}`;
+
                 document.getElementById('nombreCompleto').textContent = usuarioLogueado.nombreCompleto;
                 document.getElementById('numeroControl').textContent = `Número de control: ${usuarioLogueado.numeroControl}`;
                 document.getElementById('carrera').textContent = `Carrera: ${usuarioLogueado.carrera}`;
