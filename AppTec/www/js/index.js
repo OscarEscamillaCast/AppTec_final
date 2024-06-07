@@ -6,6 +6,6 @@ function onDeviceReady() {
 
 function redirectToLogin() {
     setTimeout(function() {
-        window.location.href = '/www/login.html'; // Asegúrate de que 'login.html' esté en la carpeta correcta
+        window.location.href = '/www/home.html'; // Asegúrate de que 'login.html' esté en la carpeta correcta
     }, 2000);
 }
